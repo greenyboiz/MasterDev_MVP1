@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Moshop - GHTK</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- logo -->
+            <div id="logo">
+                <p class="logo-moshop">moshop</p>
+            </div>
+            <!-- vertical bar -->
+            <div id="vertical-line"></div>
+            <!-- navigation -->
+            <ul id="nav">
+                <li>
+                    <a href="">
+                    0983112233 <i class="nav-arrow-down ti-angle-down"></i> 
+                    </a>
+                    <ul class="subnav">
+                        <li>
+                            <a href="#">
+                                <i class="ti-user"></i> Thông tin nhân viên
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-info-alt"></i> Thông tin cửa hàng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-tag"></i> Quản lý tag
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-shift-right"></i> Đăng xuất
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-chats ti-comment-alt"></i> Chats 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-storage ti-truck"></i> Kho & Sản phẩm 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-order ti-receipt"></i> Đơn hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-upload">
+                    <i class="ti-upload"></i> Đăng đơn 
+                    </a>
+                </li>
+            </ul>
+            <!-- end nav -->
+        </div>
+        <!-- End header -->
+        
+        <!-- Container -->
+        <div id="container">
+            <!-- About section -->
+            <div id="about">
+                <img class="about-avatar" src="./assets/images/joji.jpg" alt="avatar">
+                <p class="about-description">Nguyễn Đức Mạnh / 0983112233</p>
+                <div class="about-status">
+                    <label for="status">Trạng thái:</label>
+                    <select name="status" id="status">
+                        <option value="working" class="select-group">Đang làm việc</option>
+                        <option value="break" class="select-group">Đang nghỉ ngơi</option>
+                        <option value="not-working" class="select-group">Không làm việc</option>
+                    </select>
+                </div>
+            </div>
+            <!-- end About section -->
+
+            <!-- Working result section -->
+            <div id="working-result">
+                <fieldset id="fieldset-section">
+                    <legend class="legend-section">Kết quả công việc</legend>
+                    <ul class="date-btn">
+                        <li class="date-btn-item"><button href="#">Hôm nay</button></li>
+                        <li class="date-btn-item"><button href="#">Tuần này</button></li>
+                        <li class="date-btn-item"><button href="#">Tháng này</button></li>
+                        <li class="date-btn-item"><button class="tuychon" onclick="displayPopup()">Tùy chọn</button></li>
+                    </ul>
+                    <!-- working result table -->
+                    <table id="working-result-table" class="table">
+                        <tr>
+                            <th class="col">KH tương tác</th>
+                            <th class="col">KH có SĐT</th>
+                            <th class="col">KH đã gọi</th>
+                            <th class="col">ĐH đã chốt</th>
+                            <th class="col">Tỷ lệ chốt</th>
+                            <th class="col">ĐH thành công</th>
+                            <th class="col">ĐH hoàn</th>
+                            <th class="col">Doanh thu</th>
+                            <th class="col">Phí hoàn</th>
+                            <th class="col">Thời gian phản hồi TB</th>
+                        </tr>
+                        <tr>
+                            <td class="row">100</td>
+                            <td class="row">100</td>
+                            <td class="row">80</td>
+                            <td class="row">70</td>
+                            <td class="row">70%</td>
+                            <td class="row">60</td>
+                            <td class="row">10</td>
+                            <td class="row">12.000.000</td>
+                            <td class="row">300.000</td>
+                            <td class="row">10m34s</td>
+                        </tr>
+                    </table>
+                    <!-- Salary table -->
+                    <table id="salary-table" class="table">
+                        <tr>
+                            <th rowspan="2" class="col2 col-underline">Gói thu nhập 1</th>
+                            <th class="col2">Số ngày công</th>
+                            <th class="col2">Lương cứng</th>
+                            <th class="col2">Thưởng</th>
+                            <th class="col2">Tổng thu nhập</th>
+                        </tr>
+                        <tr>
+                            <td class="row2">25</td>
+                            <td class="row2">8.000.000</td>
+                            <td class="row2">7.000.000</td>
+                            <td class="row2 row-underline">15.000.000</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <!-- End working result -->
+
+            <!-- Bottom container section -->
+            <div id="bottom-container">
+                <!-- Working info -->
+                <fieldset id="working-info" class="bottom-container-items">
+                    <legend id="working-info-title">Thông tin công việc</legend>
+                    
+                    <!-- Form input -->
+                    <form action="" id="working-date">
+                        <div class="working-items">
+                            <label for="working-start" class="label-group">Ngày bắt đầu làm việc</label>
+                            <input type="text" name="working-start" class="working-date-group" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                        <div class="working-items">
+                            <label for="working-start" class="label-group">Nơi làm việc</label>
+                            <input type="text" class="working-date-group" name="working-start" id="working-start-input" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                    </form>
+
+                    <!-- Working time -->
+                    <div id="working-time">
+                        <p style="display: block;" id="working-time-title" class="time-details">Thời gian làm việc</p>
+                        <div class="time-details">
+                            <p class="time-details-items">1. Từ 
+                                <input class="timepicker" type="time"> đến
+                                <input class="timepicker" type="time">
+                            </p>
+                            <div class="time-details-items">
+                                <p class="day-btn">Lặp lại</p>
+                                
+                                <ul class="day-btn">
+                                    <li class="day-btn-item"><a href="#">Thứ 2</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 3</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 4</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 5</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 6</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 7</a></li>
+                                    <li class="day-btn-item"><a href="#">Chủ nhật</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="time-details">
+                            <p class="time-details-items">1. Từ 
+                                <input class="timepicker" type="time"> đến
+                                <input class="timepicker" type="time">
+                            </p>
+                            <div class="time-details-items">
+                                <p class="day-btn">Lặp lại</p>
+                                
+                                <ul class="day-btn">
+                                    <li class="day-btn-item"><a href="#">Thứ 2</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 3</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 4</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 5</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 6</a></li>
+                                    <li class="day-btn-item"><a href="#">Thứ 7</a></li>
+                                    <li class="day-btn-item"><a href="#">Chủ nhật</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div id="wi-checkbox">
+                        <p class="wic-title">Màn hình được sử dụng</p>
+                        <form id="wic-checkbox-form">
+                            <label class="label-cb-group" for="chats"> 
+                                <input type="checkbox" id="chats" name="chats" value="chats" checked="checked">
+                                <span class="checkmark"></span>
+                                Chats (Chats và chốt đơn)
+                            </label><br>
+                            <div class="subform">
+                                <label for="4567" class="label-cb-group">
+                                    <input type="checkbox" id="4567" name="4567" value="4567" checked>
+                                    <span class="checkmark"></span>
+                                    <i class="ti-world"></i>
+                                    4567
+                                </label>
+                                <br/>
+                                <label for="megazine" class="label-cb-group">
+                                    <input type="checkbox" id="megazine" name="megazine" value="megazine" checked>
+                                    <span class="checkmark"></span>
+                                    <i class="ti-world"></i>
+                                    Tạp chí BĐS Nha Trang
+                                </label>
+                                <br/>
+                                
+                                <label for="drawing" class="label-cb-group">
+                                    <input type="checkbox" id="drawing" name="drawing" value="drawing" checked>
+                                    <span class="checkmark"></span>
+                                    <i class="ti-world"></i>
+                                    Vẽ vời
+                                </label>
+                                <br/>
+                                
+                                <label for="salary-table" class="label-cb-group">
+                                    <input type="checkbox" id="sale" name="sale" value="sale" checked>
+                                    <span class="checkmark"></span>
+                                    <i class="ti-world"></i>
+                                    Page bán hàng
+                                </label>
+                            </div>
+                            
+                            <label class="label-cb-group" for="donhang"> 
+                                <input type="checkbox" id="donhang" name="donhang" value="donhang" checked>
+                                <span class="checkmark"></span>
+                                Đơn hàng (Quản lý và đăng đơn GHTK)
+                            </label>
+                            <br>
+                            <label class="label-cb-group" for="khachhang"> 
+                                <input type="checkbox" id="khachhang" name="khachhang" value="khachhang" checked>
+                                <span class="checkmark"></span>
+                                Khách hàng (Quản lý và chăm sóc KH)
+                            </label>
+                            <br>
+                            <label class="label-cb-group" for="khachhang"> 
+                                <input type="checkbox" id="khachhang" name="khachhang" value="khachhang" checked>
+                                <span class="checkmark"></span>
+                                Khách hàng (Quản lý và chăm sóc KH)
+                            </label>
+                            <br>
+                            <label class="label-cb-group" for="khachhang"> 
+                                <input type="checkbox" id="khachhang" name="khachhang" value="khachhang" checked>
+                                <span class="checkmark"></span>
+                                Khách hàng (Quản lý và chăm sóc KH)
+                            </label>
+                            <br>
+                            <label class="label-cb-group" for="khachhang"> 
+                                <input type="checkbox" id="khachhang" name="khachhang" value="khachhang" checked>
+                                <span class="checkmark"></span>
+                                Khách hàng (Quản lý và chăm sóc KH)
+                            </label>
+                          </form>
+                </fieldset>
+
+                <!-- History activity -->
+                <fieldset id="history-active" class="bottom-container-items">
+                    <legend id="history-active-title">Lịch sử hoạt động</legend>
+                    <ul class="date-btn">
+                        <li class="date-btn-item"><button href="#">Hôm nay</button></li>
+                        <li class="date-btn-item"><button href="#">Tuần này</button></li>
+                        <li class="date-btn-item"><button href="#">Tháng này</button></li>
+                        <li class="date-btn-item"><button class="tuychon" onclick="displayPopup()">Tùy chọn</button></li>
+                    </ul>
+                    <div class="history-details">
+                        <table class="history-details-items">
+                            <tr>
+                                <th>Hôm nay - Thứ tư ngày 14/4/2021</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                        </table>
+                        <table class="history-details-items">
+                            <tr>
+                                <th>Hôm nay - Thứ tư ngày 14/4/2021</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                        </table>
+                        <table class="history-details-items">
+                            <tr>
+                                <th>Hôm nay - Thứ tư ngày 14/4/2021</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                        </table>
+                        <table class="history-details-items">
+                            <tr>
+                                <th>Hôm nay - Thứ tư ngày 14/4/2021</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 14/04/2021</td>
+                                <td>Đã đăng thành công 120 ĐH</td>
+                            </tr>
+                        </table>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <!-- Pop up -->
+        <div id="wrap">
+            <div class="popup-box">
+                <div class="popup-box-title">Tùy chọn</div>
+                <form action="" class="date-form">
+                    <input placeholder="Chọn ngày bắt đầu" class="form-group" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="startDate" />
+                    <input placeholder="Chọn ngày kết thúc" class="form-group" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="endDate" />
+                </form>
+                <button class="btn-group" id="confirm-btn" onclick="exit();">Xác nhận</button>
+                <button class="btn-group" id="cancel-btn" onclick="exit()">Hủy bỏ</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+/* Common Css */
+*{
+    font-family: "Odibee Sans", cursive;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242850;
+}
+
+h1{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: antiquewhite;
+}
+
+#container{
+    background-color: #383E6D;
+    width: 50rem;
+    height: 35rem;
+    position: relative;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+#score{
+    background-color: #FFA07A;
+    float: right;
+    padding: 1rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+#correct{
+    background-color: chartreuse;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#wrong{
+    background-color: red;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#question{
+    background-color: #ccc;
+    /* position: absolute; */
+    font-size: 10rem;
+    text-align: center;
+    width: 30rem;
+    height: 10rem;
+    margin: 4rem auto 1rem auto;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+#instruction{
+    background-color: #ccc;
+    width: 30rem;
+    height: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 0rem auto 1rem auto;
+}
+
+#answer{
+    width: 30rem;
+    height: 5rem;
+    margin: 1rem 8.5rem;
+}
+
+.answer-group{
+    width: 5rem;
+    height: 5rem;
+    background-color: sandybrown;
+    float: left;
+    margin-right: 3.33rem;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+}
+
+#answer .answer-group:hover{
+    background-color: seagreen;
+
+
+}
+
+#answer #answer4{
+    margin-right: 0;
+}
+
+#start-reset{
+    background-color: slategrey;
+    position: relative;
+    margin: 0 auto;
+    width: 10rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+#timer{
+    background-color: #FFA07A;
+    position: absolute;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+#gameOver{
+    position: absolute;
+    width: 35rem;
+    height: 15rem;
+    background-color: rgba(128, 57, 57, 0.9);
+    top: 30%;
+    left: 15%;
+    display: none;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
